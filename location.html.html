@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Care Location</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src=""></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Our Services</a></li>
+                    <li><a href="">Our Location</a></li> 
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+      <h1>Our Location</h1>
+    </section>
+   <!-------location------>
+<section class="location">
+  <div class="about-col">
+   
+    <div class="location-details">
+      <p>City: Pretoria</p>
+      <p>Country: South Africa</p>
+    </div>
+    <div class="location-description">
+      <p>We are conveniently located in the heart of Pretoria, South Africa, ready to serve your home care needs. Look for our prominent sign that reads:</p>
+      <p class="sign">HOMECARE SOLUTIONS</p>
+      <p>Our location is easily accessible and designed to provide you with top-notch home care services.</p>
+      <p>At HomeCare Solutions, we are committed to transforming houses into homes, and our location is where the journey begins. Visit us to experience our exceptional services firsthand.</p>
+    <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+          </div>
+          
+          <div class="about-col">
+    
+          </div>
+        </div>
+      </section>
+</section>
+
+<!-- ...existing code for services, social media, and footer... -->
+
+<script>
+    var navlinks = document.getElementById("navlinks");
+
+    function showMenu(){
+        navlinks.style.right = "0";
+        document.addEventListener("click", closeMenuOutside);
+    }
+
+    function hideMenu(){
+        navlinks.style.right = "-200px";
+        document.removeEventListener("click", closeMenuOutside);
+    }
+
+    function closeMenuOutside(event){
+        if (!event.target.closest(".nav-links") && !event.target.closest(".fa-bars")) {
+            hideMenu();
+        }
+    }
+</script>
+<footer>
+  <p>&copy; 2023 HomeCare Solutions. All rights reserved.</p>
+</footer>
+</body>
+</html>

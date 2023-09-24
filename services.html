@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - HomeCare Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Add these CSS styles for the service images */
+        .service-image {
+            width:80%;
+            max-height: 500px; /* Adjust the height as needed */
+            object-fit: cover; /* Ensure the image fits the container */
+            border-radius: 10px; /* Add a rounded border for a professional look */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="image/logo2.jpeg"></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="location.html">Our Location</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Our Services</h1>
+    </section>
+    <section class="services">
+        <div class="low">
+            <div class="service">
+                <img src="image/Plumbing_3.jpg" alt="Plumbing Service" class="service-image">
+                <i class="fas fa-wrench service-icon"></i>
+                <h2 class="service-title">Plumbing Services</h2>
+                <p class="service-description">Our certified plumbers handle everything from fixing leaks to complex installations.</p>
+            </div>
+            <div class="service">
+                <img src="image/painting_1.jpg" alt="Painting Service" class="service-image">
+                <i class="fas fa-paint-roller service-icon"></i>
+                <h2 class="service-title">Interior and Exterior Painting</h2>
+                <p class="service-description">Impeccable painting services to refresh your interiors or give your home's exterior a new look.</p>
+            </div>
+            <div class="service">
+                <img src="image/gardening_2.jpg" alt="Gardening Service" class="service-image">
+                <i class="fas fa-tree service-icon"></i>
+                <h2 class="service-title">Gardening and Landscaping</h2>
+                <p class="service-description">Create outdoor havens with lush gardens and beautiful lawns that you'll love to spend time in.</p>
+            </div>
+            <!-- Add more services with images here -->
+        </div>
+    </section>
+    <script>
+        var navlinks = document.getElementById("navlinks");
+
+        function showMenu(){
+            navlinks.style.right = "0";
+            document.addEventListener("click", closeMenuOutside);
+        }
+
+        function hideMenu(){
+            navlinks.style.right = "-200px";
+            document.removeEventListener("click", closeMenuOutside);
+        }
+
+        function closeMenuOutside(event){
+            if (!event.target.closest(".nav-links") && !event.target.closest(".fa-bars")) {
+                hideMenu();
+            }
+        }
+    </script>
+    <footer>
+        <p>&copy; 2023 HomeCare Solutions. All rights reserved.</p>
+    </footer>
+</body>
+</html>

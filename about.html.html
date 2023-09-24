@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About HomeCare Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Add these CSS styles */
+        .about-col {
+            flex: 1;
+            padding: 20px;
+        }
+        .about-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="image/logo2.jpeg"></a>
+             <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="location.html">Our Location</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+    </section>
+    <section class="about-us">
+        <div class="low">
+            <div class="about-col">
+                <!-- Add your image here at the top -->
+                <img src="image/gardeing_1.jpg" alt="Gardening Image" class="about-image">
+                <p>Welcome to HomeCare Solutions, your trusted partner for a more beautiful and functional home. Founded with a passion for enhancing living spaces, we offer a range of services including plumbing, painting, gardening, and more, all designed to transform your house into a haven of comfort and elegance.</p>
+                <p>Our team of experienced professionals is committed to quality, reliability, and attention to detail, ensuring your satisfaction with every project. Whether it's revitalizing your interiors or creating an enchanting outdoor oasis, we have the knowledge and experience to bring your vision to life.</p>
+                <p>At HomeCare Solutions, we believe in contributing to the community. We actively engage in philanthropic initiatives and projects that uplift the lives of those in need, reflecting our commitment to making a positive difference beyond the realm of home improvement.</p>
+                <p>Discover how HomeCare Solutions can help you transform your house into a home. Contact us today to experience exceptional home care services.</p>
+                <a href="#" class="hero-btn red-btn">EXPLORE NOW</a>
+            </div>
+        </div>
+    </section>
+    
+    <!---social media section--->
+    <section class="social-icons">
+        <div class="low">
+            <div class="about-col">
+                <div class="owner-name">Home Care Solutions</div>
+            </div>
+      
+            <div class="about-col">
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p>Connect with us on social media for the latest updates, insights, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var navlinks = document.getElementById("navlinks");
+
+        function showMenu(){
+            navlinks.style.right = "0";
+            document.addEventListener("click", closeMenuOutside);
+        }
+
+        function hideMenu(){
+            navlinks.style.right = "-200px";
+            document.removeEventListener("click", closeMenuOutside);
+        }
+
+        function closeMenuOutside(event){
+            if (!event.target.closest(".nav-links") && !event.target.closest(".fa-bars")) {
+                hideMenu();
+            }
+        }
+    </script>
+    
+    <footer>
+        <p>&copy; 2023 HomeCare Solutions. All rights reserved.</p>
+    </footer>
+</body>
+</html>
